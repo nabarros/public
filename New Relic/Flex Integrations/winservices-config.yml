@@ -1,0 +1,21 @@
+integrations: 
+  - 
+    config: 
+      exporter_bind_address: "127.0.0.1"
+      exporter_bind_port: 9182
+      include_matching_entities: 
+        windowsService.name: 
+          - "regex \"^*$\""
+          - PlugPlay
+          - RpcSs
+          - LanmanServer
+          - LmHosts
+          - Eventlog
+          - Lanmanworkstation
+          - IISADMIN
+          - ds_agent
+      scrape_interval: 120s
+    exec: 
+      - "C:\\Program Files\\New Relic\\newrelic-infra\\newrelic-integrations\\nri-winservices.exe"
+    name: com.newrelic.winservices
+    timeout: 60s

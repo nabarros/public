@@ -1,0 +1,20 @@
+integrations:
+  - name: com.newrelic.winservices
+    exec:
+      - C:\Program Files\New Relic\newrelic-infra\newrelic-integrations\nri-winservices.exe
+    config:
+        exporter_bind_address: 127.0.0.1
+        exporter_bind_port: 9182
+        scrape_interval: 120s
+        include_matching_entities:
+            windowsService.name:
+               # - regex "^*$"
+                - "PlugPlay"
+                - "RpcSs"
+                - "LanmanServer"
+                - "LmHosts"
+                - "Eventlog"
+                - "Lanmanworkstation"
+                - "IISADMIN"
+                - "ds_agent"
+               # - not "ServiceNameToBeExcluded"
