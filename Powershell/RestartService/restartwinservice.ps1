@@ -1,4 +1,4 @@
-﻿##-------------------NAB_2021-10-12-------------------##
+﻿##-------------------NAB_2021-10-12--------------------##
 ##.\restartwinservice.ps1 -user MCH\1NABARROS -scriptpath 'C:\Users\1NABARROS\Desktop\RestartService_NAB' -service 'newrelic-infra'
 
 param($user,$service,$scriptpath)
